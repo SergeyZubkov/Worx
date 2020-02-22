@@ -375,8 +375,18 @@ textarea {
   font-weight: bold;
 }
 
+@font-face {
+  font-family: 'exo-thin';
+  src: url('../fonts/exo-thin-webfont.eot');
+  src: url('../fonts/exo-thin-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/exo-thin-webfont.woff') format('woff'),
+       url('../fonts/exo-thin-webfont.ttf') format('truetype'),
+       url('../fonts/exo-thin-webfont.svg#exo_thin') format('svg');
+}
+
 body {
     position: relative;
+    background: url('../images/body-bg.png');
 }
 
 .header {
@@ -423,3 +433,47 @@ body {
     height: 822px;
     background-size: cover;
 }
+
+.big-links-list {
+    display: flex;
+}
+
+.big-links-list__item {
+    width: 33.33%;
+    border-left: 1px solid #9a9a9a4a;
+    transition: box-shadow .6s;
+}
+
+.big-links-list__item:hover .big-links-list__item-image {
+    margin-top: 30px;
+}
+
+.big-links-list__item:hover {
+    box-shadow: 0 -4px 4px -2px#000;
+}
+
+.big-links-list__item:last-child {
+    border-right: 1px solid #9a9a9a4a;
+}
+
+.big-links-list__item-title {
+    font-family: "exo-thin";
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 33px 0 8px;
+    color: #fff;
+    text-align: center;
+}
+
+.big-links-list__item-sub-title {
+    color: #bebebe;
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+.big-links-list__item-image {
+    margin-top: 50px;
+        transition: .6s;
+}
+
